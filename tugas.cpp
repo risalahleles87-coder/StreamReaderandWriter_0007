@@ -37,3 +37,28 @@ public:
 };
 
 
+// FUNGSI MENAMPILKAN ISI FILE
+
+void tampilkanBarang() {
+    ifstream file("gudang.txt");
+    string data;
+
+    cout << "\n===== DATA BARANG DI GUDANG =====\n";
+
+    if (!file.is_open()) {
+        cout << "Belum ada data barang.\n";
+        return;
+    }
+
+    int no = 1;
+    while (getline(file, data)) {
+        cout << no++ << ". " << data << endl;
+    }
+
+    if (no == 1)
+        cout << "Gudang kosong.\n";
+
+    file.close();
+}
+
+
