@@ -80,3 +80,10 @@ void tambahBarang() {
 }
 
 
+// READ
+
+void bacaBarang() {
+    tampilkanBarang();
+}
+
+
