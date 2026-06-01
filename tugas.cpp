@@ -203,3 +203,59 @@ void simulasiEtalase() {
 }
 
 
+// MAIN PROGRAM
+
+int main() {
+    int pilihan;
+
+    do {
+        cout << "\n=====================================\n";
+        cout << "   SISTEM TOKO ELEKTRONIK GIBRAN JAYA\n";
+        cout << "=====================================\n";
+
+        tampilkanBarang();
+
+        cout << "\nMENU\n";
+        cout << "1. Tambah Barang (Create)\n";
+        cout << "2. Lihat Barang (Read)\n";
+        cout << "3. Update Barang (Update)\n";
+        cout << "4. Hapus Barang (Delete)\n";
+        cout << "5. Simulasi Etalase (Exception)\n";
+        cout << "0. Keluar\n";
+
+        cout << "\nPilih menu : ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+        case 1:
+            tambahBarang();
+            break;
+
+        case 2:
+            bacaBarang();
+            break;
+
+        case 3:
+            updateBarang();
+            break;
+
+        case 4:
+            hapusBarang();
+            break;
+
+        case 5:
+            simulasiEtalase();
+            break;
+
+        case 0:
+            cout << "Program selesai.\n";
+            break;
+
+        default:
+            cout << "Menu tidak tersedia!\n";
+        }
+
+    } while (pilihan != 0);
+
+    return 0;
+}
